@@ -13,7 +13,7 @@
     "tag": "1.2.1"
   },
   "platforms": {
-    "ios": "11.0"
+    "ios": "12.0"
   },
   "source_files": "ios/CapacitorCordova/**/*.{h,m}",
   "public_header_files": "ios/CapacitorCordova/CapacitorCordova/Classes/Public/*.h",
