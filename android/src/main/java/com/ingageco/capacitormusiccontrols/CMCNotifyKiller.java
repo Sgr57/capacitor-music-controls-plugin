@@ -131,4 +131,12 @@ public class CMCNotifyKiller extends Service {
 		super.onDestroy();
 		sleepWell(true);
 	}
+
+	@Override
+    public void onTaskRemoved(Intent rootIntent) {
+        Log.e("ClearFromRecentService", "END");
+        NotificationManager nManager = ((NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE));
+        nManager.cancelAll();
+        stopSelf();
+    }
 }
