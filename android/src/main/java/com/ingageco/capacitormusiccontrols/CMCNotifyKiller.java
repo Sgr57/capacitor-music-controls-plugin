@@ -3,6 +3,7 @@ package com.ingageco.capacitormusiccontrols;
 import java.lang.ref.WeakReference;
 
 import android.app.Service;
+import android.content.Context;
 import android.os.IBinder;
 import android.os.Binder;
 import android.os.PowerManager;
@@ -135,7 +136,7 @@ public class CMCNotifyKiller extends Service {
 	@Override
     public void onTaskRemoved(Intent rootIntent) {
         Log.e("ClearFromRecentService", "END");
-        NotificationManager nManager = ((NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE));
+        NotificationManager nManager = ((NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE));
         nManager.cancelAll();
         stopSelf();
     }
